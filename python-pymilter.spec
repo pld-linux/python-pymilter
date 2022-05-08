@@ -12,7 +12,7 @@
 Summary:	Python interface to sendmail milter API
 Name:		python-%{module}
 Version:	1.0.5
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/p/pymilter/%{module}-%{version}.tar.gz
@@ -29,7 +29,6 @@ BuildRequires:	python3-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 Requires:	python-modules >= 1:2.5
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
