@@ -12,11 +12,12 @@
 Summary:	Python interface to sendmail milter API
 Name:		python-%{module}
 Version:	1.0.5
-Release:	2
+Release:	3
 License:	BSD-like
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/p/pymilter/%{module}-%{version}.tar.gz
 # Source0-md5:	b5d2498b42331de66c973c3f44fb7ff5
+Patch0:		gcc15.patch
 URL:		https://pymilter.org/
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.5
@@ -46,6 +47,7 @@ Python interface to sendmail milter API
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch -P0 -p1
 
 %build
 %if %{with python2}
